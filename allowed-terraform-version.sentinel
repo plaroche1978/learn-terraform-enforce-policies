@@ -6,4 +6,7 @@ import "version"
 main = rule {
   version.new(tfplan.terraform_version).greater_than("1.1.0")
 }
+policy "less-than-100-month" {
+  enforcement_level = "soft-mandatory"
+}
 
